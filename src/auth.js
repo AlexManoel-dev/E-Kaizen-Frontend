@@ -1,0 +1,1 @@
+// Aqui ficam as funções que usam o token para login. Ex: isAuthenticated.

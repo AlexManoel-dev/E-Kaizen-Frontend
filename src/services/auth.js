@@ -1,0 +1,1 @@
+// Aqui ficam algumas funções para pegar informações do usuário logado
