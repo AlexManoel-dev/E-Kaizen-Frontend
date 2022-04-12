@@ -3,12 +3,19 @@ import { NavLink as Link } from "react-router-dom";
 import styled from "styled-components";
 
 export const Nav = styled.nav`
-    background: var(--black-color);
+    background: ${props => props.navbar ? 'var(--black-color)' : 'transparent'};
+    /* background: var(--black-color); */
     height: 85px;
     display: flex;
     justify-content: space-between;
     padding: 0.2rem calc((100vw - 1000px) / 2);
     z-index: 12;
+    text-transform: uppercase;
+    position: sticky;
+    top: 0;
+    -webkit-transition: background-color 300ms linear;
+    -ms-transition: background-color 300ms linear;
+    transition: background-color 300ms linear;
 `;
 
 export const NavLink = styled(Link)`
