@@ -20,17 +20,19 @@ export default function BetterPieces({ data }) {
 
     return (
         <Container>
-            {/* <Titulo>Título</Titulo> */}
+            <Titulo>Um pouco do que podemos oferecer!</Titulo>
             <Carousel>
-                <FaArrowAltCircleLeft
-                    style={{
-                        fontSize: "3rem",
-                        zIndex: "10",
-                        cursor: "pointer",
-                        userSelect: "none",
-                    }}
-                    onClick={previousImage}
-                />
+                <div style={{ width: '200px', display: 'flex', justifyContent: 'center' }}>
+                    <FaArrowAltCircleLeft
+                        style={{
+                            fontSize: "3rem",
+                            zIndex: "10",
+                            cursor: "pointer",
+                            userSelect: "none",
+                        }}
+                        onClick={previousImage}
+                    />
+                </div>
                 {data.map((d, i) => {
                     return (
                         <Images index={i} current={current} key={i}>
@@ -38,15 +40,17 @@ export default function BetterPieces({ data }) {
                         </Images>
                     );
                 })}
-                <FaArrowAltCircleRight
-                    style={{
-                        fontSize: "3rem",
-                        zIndex: "10",
-                        cursor: "pointer",
-                        userSelect: "none",
-                    }}
-                    onClick={nextImage}
-                />
+                <div style={{ width: '200px', display: 'flex', justifyContent: 'center' }}>
+                    <FaArrowAltCircleRight
+                        style={{
+                            fontSize: "3rem",
+                            zIndex: "10",
+                            cursor: "pointer",
+                            userSelect: "none",
+                        }}
+                        onClick={nextImage}
+                    />
+                </div>
             </Carousel>
         </Container>
     );

@@ -7,28 +7,33 @@ export const Container = styled.div`
     height: 100vh;
     background-color: #403e3e;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+    /* border: 1px solid purple; */
 `;
 
 export const Carousel = styled.div`
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    width: 900px;
-    height: auto;
-    border: 1px solid red;
+    /* border: 1px solid red; */
 `;
 
 export const Images = styled.div`
-    width: 100px;
-    height: 100px;
     opacity: ${(props) => (props.index === props.current ? 1 : 0)};
     transition-duration: ${(props) => (props.index === props.current ? "1s" : "1s ease")};
     transform: ${(props) => (props.index === props.current ? "scale(1.08)" : "")};
 
     img {
+        width: 500px;
+        height: 400px;
         object-fit: cover;
-        border: 1px solid green;
+        border-radius: 10px;
+        /* border: 1px solid green; */
     }
+`;
+
+export const Titulo = styled.h1`
+    padding-bottom: 100px;;
 `;
