@@ -3,7 +3,7 @@ import { NavLink as Link } from "react-router-dom";
 import styled from "styled-components";
 
 export const Nav = styled.nav`
-    background: ${props => props.navbar ? 'var(--black-color)' : 'var(--black-color)'};
+    background: ${props => props.navbar ? 'var(--dark-green)' : 'var(--dark-green)'};
     opacity: ${props => props.navbar ? 0.8 : 1};
     height: 85px;
     display: flex;

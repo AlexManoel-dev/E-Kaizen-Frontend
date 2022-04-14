@@ -10,12 +10,12 @@ export const Container = styled.div`
     overflow: hidden;
     box-shadow: 0px 0px 15px -5px;
     border-radius: 10px;
-    background-color: var(--black-color);
+    background-color: var(--kombu-green);
     margin: 8px;
 
     ion-icon {
         font-size: 64px;
-        color: var(--green-color);
+        color: var(--olive-green);
         margin-bottom: 20px;
     }
 
@@ -28,7 +28,7 @@ export const Container = styled.div`
     }
 
     button{
-        background-color: var(--black-color);
+        background-color: var(--kombu-green);
         border-radius: 10px;
         width: 100px;
         height: 50px;
@@ -37,7 +37,9 @@ export const Container = styled.div`
         border: 1px solid;
         cursor: pointer;
         &:hover{
-            opacity: 0.7;
+            opacity: 0.5;
+            /* transform: translateY(-5px);
+            transition: transform 150ms linear; */
         }
     }
 `;

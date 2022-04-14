@@ -1,22 +1,25 @@
 export const cardsData = [
+    // {
+    //     name: 'hardware-chip-outline',
+    //     title: 'Processadores',
+    //     subtitle: 'Os melhores processadores do mercado'
+    // },
     {
-        name: 'hardware-chip-outline',
-        title: 'Processadores',
-        subtitle: 'Os melhores processadores do mercado'
+        name: 'desktop-outline',
+        title: 'Computadores',
+        subtitle: 'Os melhores computadores do mercado',
+        pathname: '/computers'
     },
     {
-        name: 'hardware-chip-outline',
-        title: 'Monitores',
-        subtitle: 'Os melhores monitores do mercado'
+        name: 'headset-outline',
+        title: 'Perfiféricos',
+        subtitle: 'Os melhores periféricos do mercado',
+        pathname: '/peripherals'
     },
     {
-        name: 'hardware-chip-outline',
-        title: 'Teclados',
-        subtitle: 'Os melhores teclados do mercado'
-    },
-    {
-        name: 'hardware-chip-outline',
-        title: 'Gabinetes',
-        subtitle: 'Os melhores gabinetes do mercado'
+        name: 'game-controller-outline',
+        title: 'Consoles',
+        subtitle: 'Os melhores consoles do mercado',
+        pathname: '/videogames'
     },
 ]

@@ -6,7 +6,7 @@ export const Container = styled.div`
     align-items: center;
     width: 100%;
     height: 95vh;
-    background-color: var(--black-color);
+    background-color: var(--dark-green);
     position: relative;
     top: 0;
 `;

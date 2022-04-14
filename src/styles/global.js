@@ -2,7 +2,11 @@ import { createGlobalStyle, css } from "styled-components";
 
 export default createGlobalStyle`
     :root{
-        --black-color: #363636;
+        --dark-green: #181F1C;
+        --kombu-green: #274029;
+        --hunter-green: #315C2B;
+        --olive-green: #60712F;
+        --citron-green: #9EA93F;
         --green-color: #228B22;
     }
     *{
@@ -27,7 +31,7 @@ export default createGlobalStyle`
         }
         
         ::-webkit-scrollbar-thumb {
-            background: var(--black-color);
+            background: var(--dark-green);
             border-radius: 10px;
         }
 

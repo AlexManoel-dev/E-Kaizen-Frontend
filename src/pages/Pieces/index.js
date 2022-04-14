@@ -13,6 +13,7 @@ export default function Pieces(){
                         name={c.name}
                         title={c.title}
                         subtitle={c.subtitle}
+                        pathname={c.pathname}
                     />
                 ))}
             </Cards>
