@@ -1,10 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Table } from './style';
 import { tablesData } from '../../../assets/data/tablesData.js';
+import Modal from '../../Modals/Budget';
 
 export default function Specifications(){
 
-    console.log(tablesData)
+    const [showModal, setShowModal] = useState(false);
 
     return(
         <>
@@ -25,7 +26,12 @@ export default function Specifications(){
                                     <td>{t.memoriaRam}</td>
                                     <td>{t.memoria}</td>
                                     <td>{t.preco}</td>
-                                    <td>{t.imagem}</td>
+                                    <td
+                                        style={{ cursor: 'pointer' }}
+                                        onClick={() => {
+                                            setShowModal(true)
+                                        }}
+                                    >teste</td>
                                 </tr>
                             ))}
                         </tbody>
@@ -76,6 +82,10 @@ export default function Specifications(){
                               : null
                 }
             </Table>
+            <Modal 
+                showModal={showModal}
+                setShowModal={setShowModal}
+            />
         </>
     );
 };
