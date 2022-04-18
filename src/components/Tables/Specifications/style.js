@@ -34,4 +34,8 @@ export const Table = styled.table`
         text-overflow: ellipsis;
         /* border: 1px solid red; */
     }
+
+    ion-icon{
+        font-size: 30px;
+    }
 `;

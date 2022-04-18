@@ -1,7 +1,7 @@
 export const tablesData = {
-    titulosComputers: ['Fabricante', 'Processador', 'Memoria Ram', 'Memória', 'Preço', 'Imagem'],
-    titulosPeripherals: ['Fabricante', 'Modelo', 'RGB', 'Cor', 'Preço', 'Imagem'],
-    titulosVideogames: ['Fabricante', 'Modelo', 'Cor', 'Memória', 'Controles', 'Preço', 'Imagem'],
+    titulosComputers: ['Fabricante', 'Processador', 'Memoria Ram', 'Memória', 'Preço', 'Orçamento'],
+    titulosPeripherals: ['Fabricante', 'Modelo', 'RGB', 'Cor', 'Preço', 'Orçamento'],
+    titulosVideogames: ['Fabricante', 'Modelo', 'Cor', 'Memória', 'Controles', 'Preço', 'Orçamento'],
     computers: [
         {
             fabricante: 'T-dagger',

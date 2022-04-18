@@ -60,7 +60,7 @@ export const Submit = styled.button`
     border-radius: 7px;
     cursor: pointer;
     border: 1px solid black;
-    margin-top 40px;
+    margin-top: 40px;
     font-weight: bold;
     &:hover{
         opacity: 0.5;

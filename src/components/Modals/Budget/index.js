@@ -3,7 +3,7 @@ import { Background, ModalContent, Form, FormContent, Submit } from './style';
 import Swal from "sweetalert2";
 import InputMask from "react-input-mask";
 
-export default function Budget({ showModal, setShowModal }){
+export default function Budget({ showModal, setShowModal }) {
 
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
@@ -15,7 +15,7 @@ export default function Budget({ showModal, setShowModal }){
 
     const keyPress = useCallback(
         (e) => {
-          if (e.key === "Escape" && showModal) setShowModal(!showModal);
+            if (e.key === "Escape" && showModal) setShowModal(!showModal);
         },
         [setShowModal, showModal]
     );
@@ -23,11 +23,21 @@ export default function Budget({ showModal, setShowModal }){
     useEffect(() => {
         document.addEventListener("keydown", keyPress);
         return () => document.removeEventListener("keydown", keyPress);
-      }, [keyPress]);
+    }, [keyPress]);
 
-    return(
+    async function handleSubmit(e) {
+        e.preventDefault();
+
+        Swal.fire('Sucesso!', 'Orçamento criado', 'success');
+        setTimeout(() => {
+            setShowModal(false);
+            window.location.reload();
+        }, 1500);
+    }
+
+    return (
         <>
-            {showModal ? 
+            {showModal ?
                 (
                     <Background
                         ref={modalRef}
@@ -38,11 +48,11 @@ export default function Budget({ showModal, setShowModal }){
                         }}
                     >
                         <ModalContent>
-                            <Form>
+                            <Form onSubmit={handleSubmit}>
                                 <h3>Formulário de Interesse</h3>
                                 <FormContent>
                                     <label>Nome:</label>
-                                    <input 
+                                    <input
                                         type="text"
                                         value={name}
                                         placeholder="Ex: João Castro"
@@ -50,7 +60,7 @@ export default function Budget({ showModal, setShowModal }){
                                         required
                                     />
                                     <label>Email:</label>
-                                    <input 
+                                    <input
                                         type="email"
                                         value={email}
                                         placeholder="Ex: email@gmail.com"
@@ -58,7 +68,7 @@ export default function Budget({ showModal, setShowModal }){
                                         required
                                     />
                                     <label>CPF:</label>
-                                    <InputMask  
+                                    <InputMask
                                         mask="999.999.999-99"
                                         value={cpf}
                                         placeholder="Ex: 000.000.000-00"
@@ -69,10 +79,13 @@ export default function Budget({ showModal, setShowModal }){
                                             border: '1px solid',
                                             marginBottom: '15px',
                                             padding: '10px',
-                                            textAlign: 'center'}}
+                                            textAlign: 'center'
+                                        }}
+                                        pattern='^\d{3}.\d{3}.\d{3}-\d{2}$'
+                                        required
                                     />
                                     <label>CEP:</label>
-                                    <InputMask  
+                                    <InputMask
                                         mask="99999-999"
                                         value={cep}
                                         placeholder="Ex: 00000-000"
@@ -83,10 +96,13 @@ export default function Budget({ showModal, setShowModal }){
                                             border: '1px solid',
                                             marginBottom: '15px',
                                             padding: '10px',
-                                            textAlign: 'center'}}
+                                            textAlign: 'center'
+                                        }}
+                                        pattern="\d{5}-?\d{3}"
+                                        required
                                     />
                                     <label>Telefone:</label>
-                                    <InputMask  
+                                    <InputMask
                                         mask="(99) 99999-9999"
                                         value={tel}
                                         placeholder="Ex: (00) 00000-0000"
@@ -97,7 +113,10 @@ export default function Budget({ showModal, setShowModal }){
                                             border: '1px solid',
                                             marginBottom: '15px',
                                             padding: '10px',
-                                            textAlign: 'center'}}
+                                            textAlign: 'center'
+                                        }}
+                                        pattern="([^0-9]{0,}([0-9]{2})[^0-9]{0,}([0-9]{5})[^0-9]{0,}([0-9]{4}).*)"
+                                        required
                                     />
                                 </FormContent>
                                 <Submit>Estou interessado!</Submit>
@@ -105,7 +124,7 @@ export default function Budget({ showModal, setShowModal }){
                         </ModalContent>
                     </Background>
                 )
-            : null }
+                : null}
         </>
     );
 };
