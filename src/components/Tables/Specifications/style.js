@@ -7,6 +7,10 @@ export const Table = styled.table`
     border-collapse: collapse;
     /* border: 1px solid red; */
 
+    @media screen and (max-width: 768px) {
+        width: 90%;
+    }
+
     thead{
         background-color: var(--kombu-green);
         /* border: 1px solid red; */

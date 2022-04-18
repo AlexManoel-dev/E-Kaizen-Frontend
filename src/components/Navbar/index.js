@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Nav, NavLink, Bars, NavMenu, NavBtn, NavBtnLink } from "./style";
+import { Nav, NavLink, Bars, NavMenu, NavBtn, NavBtnLink, Icon } from "./style";
 import { IoHardwareChipSharp } from 'react-icons/io5';
 
 export default function Navbar() {
@@ -19,7 +19,7 @@ export default function Navbar() {
     return (
         <>
             <Nav navbar={navBar}>
-                <Bars />
+                {/* <Bars /> */}
                 <IoHardwareChipSharp color='green' style={{ marginTop: '10px', width: '60px', height: '60px' }} />
                 <NavMenu>
                     <NavLink to="/" activeStyle>
@@ -30,7 +30,10 @@ export default function Navbar() {
                     </NavLink>
                 </NavMenu>
                 <NavBtn>
-                    <NavBtnLink to="/signin">Sign In</NavBtnLink>
+                    {/* <NavBtnLink to="/aboutUs">Sobre nós</NavBtnLink> */}
+                    <a href="/aboutUs">
+                        <Icon />
+                    </a>
                 </NavBtn>
             </Nav>
         </>

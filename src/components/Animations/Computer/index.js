@@ -1,10 +1,13 @@
 import React from 'react';
-import { Container, Animation } from './style';
+import { Container } from './style';
+import './style.css';
 
 export default function Computer(){
     return(
         <Container>
-            <Animation />
+            <div className='animation'>
+                <p>O site onde você encontra as melhores peças!</p>
+            </div>
         </Container>
     );
 };

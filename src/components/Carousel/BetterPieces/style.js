@@ -5,11 +5,12 @@ export const Container = styled.div`
     align-items: center; */
     width: 100%;
     height: 100vh;
-    background-color: var(--kombu-green);
+    background-color: var(--dark-green);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    color:  white;
     /* border: 1px solid purple; */
 `;
 
@@ -18,6 +19,10 @@ export const Carousel = styled.div`
     justify-content: center;
     align-items: center;
     /* border: 1px solid red; */
+
+    @media screen and (max-width: 1022px) {
+        width: 100%;
+    }
 `;
 
 export const Images = styled.div`
@@ -31,6 +36,11 @@ export const Images = styled.div`
         object-fit: cover;
         border-radius: 10px;
         /* border: 1px solid green; */
+        
+        @media screen and (max-width: 768px){
+            width: 300px;
+            height: 200px;
+        }
     }
 `;
 

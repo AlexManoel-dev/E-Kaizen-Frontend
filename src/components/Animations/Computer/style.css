@@ -1,0 +1,31 @@
+.animation{
+    width: 900px;
+    height: 300px;
+    padding: 10px;
+    /* border: 1px solid red; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation-duration: 8s;
+    animation-name: cor_fonte;
+    animation-iteration-count: infinite;
+    text-align: center;
+}
+
+.animation p{
+    font-size: 40px;
+    animation-duration: 2s;
+    animation-name: brilho;
+    animation-iteration-count: infinite;
+}
+
+@keyframes cor_fonte{
+    0%,100%{color: #0ff}
+    25%{color: #f0f}
+    50%{color: #06f}
+    75%{color: #fff}
+}
+
+@keyframes brilho{
+    50%{text-shadow: 0px 0px 9px}
+}

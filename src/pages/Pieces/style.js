@@ -9,6 +9,14 @@ export const Container = styled.div`
     justify-content: center;
     align-items: center;
     /* border: 1px solid purple; */
+    @media screen and (max-width: 768px){
+        height: auto;
+    }
+
+    h1{
+        color: white;
+        margin-bottom: 30px;
+    }
 `;
 
 export const Cards = styled.div`

@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, { keyframes } from "styled-components";
 
 export const Container = styled.div`
     display: flex;
@@ -11,8 +11,24 @@ export const Container = styled.div`
     top: 0;
 `;
 
-export const Animation = styled.div`
-    width: 300px;
-    height: 300px;
-    border: 1px solid red;
-`;
+// const cor_fonte = keyframes`
+//     0,100%{color: #0ff}
+//     25%{color: #f0f}
+// `;
+
+// export const Animation = styled.div`
+//     width: 600px;
+//     height: 300px;
+//     border: 1px solid red;
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     animation-duration: 8s;
+//     animation-name: ${cor_fonte};
+//     animation-iteration-count: infinite;
+
+//     p {
+//         font-size: 28px;
+//         color: var(--olive-green);
+//     }
+// `;

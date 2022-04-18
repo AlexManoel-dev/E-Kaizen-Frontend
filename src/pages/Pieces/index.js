@@ -6,6 +6,7 @@ import { cardsData } from "../../assets/data/cardsData";
 export default function Pieces(){
     return(
         <Container>
+            <h1>Peças</h1>
             <Cards>
                 {cardsData.map((c,i) => (
                     <Card

@@ -1,3 +1,4 @@
+import { BsNewspaper } from 'react-icons/bs';
 import { FaBars } from "react-icons/fa";
 import { NavLink as Link } from "react-router-dom";
 import styled from "styled-components";
@@ -55,18 +56,30 @@ export const Bars = styled(FaBars)`
 export const NavMenu = styled.div`
     display: flex;
     align-items: center;
-    margin-right: -24px;
+    /* margin-right: -24px; */
     @media screen and (max-width: 768px) {
-        display: none;
+        /* display: none; */
     }
+`;
+
+export const Icon = styled(BsNewspaper)`
+    display: flex;
+    align-items: center;
+    margin-right: 24px;
+    font-size: 30px;
+    color: white;
 `;
 
 export const NavBtn = styled.nav`
     display: flex;
     align-items: center;
     margin-right: 24px;
-    @media screen and (max-width: 768px) {
+    /* @media screen and (max-width: 768px) {
         display: none;
+    } */
+
+    a{
+        text-decoration: none;
     }
 `;
 
