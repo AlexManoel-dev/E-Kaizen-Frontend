@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { MdClose } from 'react-icons/md';
 
 export const Background = styled.div`
     width: 100vw;
@@ -65,4 +66,15 @@ export const Submit = styled.button`
     &:hover{
         opacity: 0.5;
     }
+`;
+
+export const CloseModalButton = styled(MdClose)`
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 32px;
+    height: 32px;
+    padding: 0;
+    z-index: 10;
 `;

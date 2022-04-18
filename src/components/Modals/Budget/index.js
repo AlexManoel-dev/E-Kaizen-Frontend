@@ -1,5 +1,5 @@
 import React, { useState, useRef, useCallback, useEffect } from 'react';
-import { Background, ModalContent, Form, FormContent, Submit } from './style';
+import { Background, ModalContent, Form, FormContent, Submit, CloseModalButton } from './style';
 import Swal from "sweetalert2";
 import InputMask from "react-input-mask";
 
@@ -25,6 +25,14 @@ export default function Budget({ showModal, setShowModal }) {
         return () => document.removeEventListener("keydown", keyPress);
     }, [keyPress]);
 
+    function clear() {
+        setName('');
+        setEmail('');
+        setCpf('');
+        setCep('');
+        setTel('');
+    }
+
     async function handleSubmit(e) {
         e.preventDefault();
 
@@ -44,6 +52,7 @@ export default function Budget({ showModal, setShowModal }) {
                         onClick={(e) => {
                             if (modalRef.current === e.target) {
                                 setShowModal(!showModal);
+                                clear();
                             }
                         }}
                     >
@@ -121,6 +130,12 @@ export default function Budget({ showModal, setShowModal }) {
                                 </FormContent>
                                 <Submit>Estou interessado!</Submit>
                             </Form>
+                            <CloseModalButton
+                                onClick={() => {
+                                    setShowModal(!showModal);
+                                    clear();
+                                }}
+                            />
                         </ModalContent>
                     </Background>
                 )
